@@ -1,22 +1,28 @@
 import java.util.*;
-public class Square
+
+public class Square 
 {
-          public static void main(String args[])
-	   {
-                         Scanner Q= new Scanner(System.in);
-                         int num,i,sum=0;
-                         System.out.println("enter a number till square sum needed");
-                         num= Q.nextInt();
-                         for(i=1;i<=num;i++)
-			{
-                            int ans;
-                            ans=i*i;
-                            System.out.print(ans + " + ");
-                            sum=sum+ans;
-
-			}
-                       System.out.print("="+sum);
-
-                         
-	   }
+    public static void main(String[] args) 
+    {
+        Scanner Q = new Scanner(System.in);
+        int num, i, ans, sum = 0;
+        
+        System.out.println("Enter a number till square sum needed:");
+        num = Q.nextInt();
+        
+        for (i = 1; i <= num; i++) 
+        {
+            ans = i * i;
+            sum = sum + ans;
+            if (i < num) 
+            {
+                System.out.print(ans + " + ");
+            } 
+            else 
+            {
+                System.out.print(ans + " = " + sum);
+            }
+        }
+        System.out.println();
+    }
 }
